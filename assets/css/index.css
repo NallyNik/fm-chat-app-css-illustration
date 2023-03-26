@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    /* text */
+    --pale-violet: hsl(276, 100%, 81%);
+    --moderate-violet: hsl(276, 55%, 52%);
+    --desaturated-dark-violet: hsl(271, 15%, 43%);
+    --grayish-blue: hsl(206, 6%, 79%);
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    --dark-grayish-violet: hsl(270, 7%, 64%);
+    /* gradient */
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%);
+    /* secondary */
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 20%, 96%);
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    --very-light-magenta: hsl(289, 100%, 72%);
+}
+
+body, header, .container, main, .chat, .chat-right, .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.person-id, figure, .choice, .choice-div {
+    display: flex;
+}
+header, .person-id, .chat, figure, .chat-right, .choice-div{
+    gap: .5rem;
+}
+.phone, .person-2 {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    min-height: 100vh;
+    padding: 4rem 0;
+
+    background: var(--light-grayish-violet);
+}
+
+/* aside - cellphone */
+aside {
+    gap: 4rem;
+}
+
+.phone {
+    width: 15rem;
+    padding: .6rem;
+
+    border-radius: 2rem;
+    background-color: var(--white);
+    
+}
+header {
+    padding: 2rem .5rem .5rem;
+
+    background-image: linear-gradient(90deg, var(--light-violet), var(--light-magenta));
+    border-radius: 1.5rem 1.5rem .3rem .3rem;
+    color: var(--pale-violet);
+}
+.white-box {
+    width: 5rem;
+    height: 1rem;
+    margin-top: -2rem;
+
+    background-color: var(--white);
+    border-radius: 1rem;
+}
+.avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+header h1 {
+    font-size: .8rem;
+    color: var(--white);
+}
+header p {
+    font-size: .5rem;
+}
+
+.chat {
+    padding: .5rem;
+    font-size: .5rem;
+
+    white-space: pre-line;
+    background: var(--light-grayish-violet);
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+figure img {
+    width: 2.5rem;
+    border-radius: .5rem;
+}
+.chat-left {
+    align-self: self-start;
+    
+    color: var(--moderate-violet);
+}
+.chat-right {
+    align-self: self-end;
+
+    color: var(--desaturated-dark-violet);
+}
+.person-1 {
+    padding: .25rem;
+    background-color: var(--pale-violet);
+    border-radius: .5rem .5rem .5rem .25rem;
+}
+.person-2 {
+    width: fit-content;
+    padding: .25rem;
+    align-self: self-end;
+
+    background-color: var(--white);
+    border-radius: .5rem .5rem .25rem .5rem;
+}
+.choice {
+    width: 10rem;
+    padding: .5rem;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--pale-violet);
+    background-image: linear-gradient(90deg, var(--light-magenta), var(--light-violet));
+    border-radius: .5rem .5rem .5rem .25rem;
+}
+.radio {
+    width: .5rem;
+    height: .5rem;
+
+    border-radius: 50%;
+    outline: 1px solid var(--very-light-magenta);
+}
+.price {
+    color: var(--white);
+    font-size: .8rem;
+}
+.message-box {
+    width: 100%;
+    padding: .25rem 1rem;
+
+    background-color: var(--white);
+    border-radius: 1rem;
+    color: var(--grayish-blue);
+}
+
+/* main */
+.text {
+    padding: 2rem;
+    gap: 2rem;
+    text-align: center;
+}
+.text h1 {
+    font-size: 2.5rem;
+    color: var(--very-dark-desaturated-violet);
+}
+.text p {
+    color: var(--dark-grayish-violet);
+    line-height: 2;
+}
+
+/* footer */
+.attribution {
+    padding-bottom: .5rem;
+
+    font-size: .8rem;
+}
+a {
+    color: var(--very-dark-desaturated-violet);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--light-magenta);
+}
+
+
+@media (min-width: 1000px) {
+    .container {
+        margin: 1rem;
+        flex-direction: row;
+    }
+    .text {
+        white-space: pre-line;
+        text-align: left;
+    }
+}
