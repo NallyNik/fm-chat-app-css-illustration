@@ -9,44 +9,86 @@
   
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Samuel Green
-  Available to Walk
-
-  That sounds great. I’d be happy with that.
-
-  Could you send over some pictures of your dog, please?
-
-  Here are a few pictures. She’s a happy girl!
-
-  Can you make it?
-
-  She looks so happy! The time we discussed works. How long shall I take her out for?
-
-  30 minute walk
-  $29
-
-  1 hour walk
-  $49
-
-  Type a message…
-
-  Simple booking
-
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
+  <div class="container">
+    <aside class="main">
+      <section class="phone">
+        <header>
+          <div class="white-box"></div>
+          <div class="person-id">
+            <img src="./assets/images/avatar.jpg" alt="" class="avatar">
+            <div>
+              <h1>Samuel Green</h1>
+              <p>Available to Walk</p>
+            </div>
+          </div>
+        </header>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+        <div class="chat">
+          <p class="chat-left person-1">That sounds great. I’d be
+            happy with that.
+          </p>
+          <p class="chat-left person-1">Could you send over some
+            pictures of your dog, please?
+          </p>
+          
+          <div class="chat-right">
+            <figure>
+              <img src="./assets/images/dog-image-1.jpg" alt="Image of dog">
+              <img src="./assets/images/dog-image-2.jpg" alt="Image of dog">
+              <img src="./assets/images/dog-image-3.jpg" alt="Image of dog">
+            </figure>
+            <p class="person-2">Here are a few pictures. She’s
+              a happy girl!
+            </p>
+            <p class="person-2">Can you make it?</p>
+          </div>
+  
+          <p class="chat-left person-1">She looks so happy! The time
+            we discussed works. How
+            long shall I take her out for?
+          </p>
+          <div class="chat-left choice">
+            <div class="choice-div">
+              <div class="radio"></div>
+              <p>30 minute walk</p>
+            </div>
+            <p class="price">$29</p>
+          </div>
+          <div class="chat-left choice">
+            <div  class="choice-div">
+              <div class="radio"></div>
+              <p>1 hour walk</p>
+            </div>
+            <p class="price">$49</p>
+          </div>
+          
+          <div class="message-box">
+            <p> Type a message…</p>
+          </div>
+        </div>
+      </section>
+    </aside>
+  
+    <main class="text">
+      <section >
+        <h1>Simple booking</h1>
+        <p>
+          Stay in touch with our dog walkers through the chat
+          interface. This makes it easy to discuss arrangements and
+          make bookings. Once the walk has been completed you can
+          rate your walker and book again all through the chat.
+        </p>
+      </section>
+    </main>
   </div>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.linkedin.com/in/anahitareismonezi/" target="_blank">Anahita Monezi</a>.
+    </div>
+  </footer>
 </body>
 </html>
