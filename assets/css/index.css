@@ -5,30 +5,28 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
-    /* text */
+
     --pale-violet: hsl(276, 100%, 81%);
     --moderate-violet: hsl(276, 55%, 52%);
     --desaturated-dark-violet: hsl(271, 15%, 43%);
     --grayish-blue: hsl(206, 6%, 79%);
     --very-dark-desaturated-violet: hsl(271, 36%, 24%);
     --dark-grayish-violet: hsl(270, 7%, 64%);
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 20%, 96%);
+    --very-light-magenta: hsl(289, 100%, 72%);
     /* gradient */
     --light-magenta: hsl(293, 100%, 63%);
     --light-violet: hsl(264, 100%, 61%);
-    /* secondary */
-    --white: hsl(0, 0%, 100%);
-    --light-grayish-violet: hsl(270, 20%, 96%);
-    --very-dark-desaturated-violet: hsl(271, 36%, 24%);
-    --very-light-magenta: hsl(289, 100%, 72%);
 }
 
-body, header, .container, main, .chat, .chat-right, .text {
+body, header, .container, main, .chat, .chat-right, .fake-button, .text {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.person-id, figure, .choice, .choice-div {
+.id-container, .person-id, figure, .choice, .choice-div, .message-box {
     display: flex;
 }
 header, .person-id, .chat, figure, .chat-right, .choice-div{
@@ -43,6 +41,19 @@ body {
     padding: 4rem 0;
 
     background: var(--light-grayish-violet);
+}
+
+/* background shape */
+.bg-shape {
+    width: 26rem;
+    height: 90vh;
+    position: absolute;
+    top: -10rem;
+    left: -14rem;
+    z-index: -2;
+
+    border-radius: 0 0 30rem 30rem;
+    background-image: linear-gradient(var(--light-magenta), var(--light-violet));
 }
 
 /* aside - cellphone */
@@ -66,18 +77,29 @@ header {
     color: var(--pale-violet);
 }
 .white-box {
-    width: 5rem;
-    height: 1rem;
-    margin-top: -2rem;
+    width: 7rem;
+    height: 2rem;
+    margin-top: -2.6rem;
 
     background-color: var(--white);
     border-radius: 1rem;
 }
+.id-container {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.person-id {
+    align-items: center;
+}
 .avatar {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
     border: 1px solid var(--white);
+}
+i {
+    font-size: .6rem;
 }
 header h1 {
     font-size: .8rem;
@@ -112,6 +134,7 @@ figure img {
 .person-1 {
     padding: .25rem;
     background-color: var(--pale-violet);
+    opacity: 0.7;
     border-radius: .5rem .5rem .5rem .25rem;
 }
 .person-2 {
@@ -145,11 +168,21 @@ figure img {
 }
 .message-box {
     width: 100%;
-    padding: .25rem 1rem;
+    padding: .25rem 0 .25rem 1rem;
+    justify-content: space-between;
+    align-items: center;
 
     background-color: var(--white);
     border-radius: 1rem;
     color: var(--grayish-blue);
+}
+.fake-button {
+    width: 1rem;
+    height: 1rem;
+    padding: .7rem;
+
+    border-radius: 50%;
+    background-color: var(--very-dark-desaturated-violet);
 }
 
 /* main */
@@ -183,9 +216,14 @@ a:hover {
 
 
 @media (min-width: 1000px) {
+    .bg-shape {
+        top: 0;
+        left: 0;
+    }
     .container {
         margin: 1rem;
         flex-direction: row;
+        gap: 5rem;
     }
     .text {
         white-space: pre-line;
